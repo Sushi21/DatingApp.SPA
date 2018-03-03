@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-default">
   <a class="navbar-brand" href="#">Dating App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto" *ngIf="loggedIn()">
       <li class="nav-item active">
         <a class="nav-link" href="#">Matches <span class="sr-only">(current)</span></a>
       </li>
@@ -16,24 +16,21 @@
         <a class="nav-link" href="#">Messages</a>
       </li>
     </ul>
-    <form *ngIf="!loggedIn()" #loginForm="ngForm" class="form-inline my-2 my-lg-0" (ngSubmit)="login()">
+  </div>
+  <form *ngIf="!loggedIn()" #loginForm="ngForm" class="form-inline my-2 my-lg-0" (ngSubmit)="login()">
       <input class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="Email" required name="username" [(ngModel)]="model.username">
       <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" required name="password" [(ngModel)]="model.password">
       <button class="btn btn-success my-2 my-sm-0" [disabled]="!loginForm.valid" type="submit">Sign In</button>
     </form>
     <ul *ngIf="loggedIn()" class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" (click)="logout()">Logout</a>
-          </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Welcome User
+      <li class="nav-item dropdown" dropdown>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" dropdownToggle>
+          Welcome {{authService.decodedToken?.unique_name | titlecase}}
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" *dropdownMenu>
           <a class="dropdown-item" href="#"> <i class="fa fa-user"></i> Edit Profile</a>
           <a class="dropdown-item" (click)="logout()"> <i class="fa fa-sign-out"></i> Logout</a>
         </div>
       </li>
   </ul>
-  </div>
 </nav>
