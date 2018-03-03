@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-default">
-  <a class="navbar-brand" href="#">Dating App</a>
+  <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active" >Dating App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto" *ngIf="loggedIn()">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Matches <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/members']" routerLinkActive="router-link-active">Matches</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Lists</a>
+        <a class="nav-link" [routerLink]="['/lists']" routerLinkActive="router-link-active" >Lists</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" [routerLink]="['/messages']" routerLinkActive="router-link-active" >Messages</a>
       </li>
     </ul>
   </div>
@@ -24,7 +24,7 @@
     </form>
     <ul *ngIf="loggedIn()" class="navbar-nav">
       <li class="nav-item dropdown" dropdown>
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" dropdownToggle>
+        <a class="nav-link dropdown-toggle" (click)="false" id="navbarDropdownMenuLink" dropdownToggle>
           Welcome {{authService.decodedToken?.unique_name | titlecase}}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" *dropdownMenu>
