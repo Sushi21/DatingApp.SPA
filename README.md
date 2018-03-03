@@ -1,6 +1,16 @@
 # DatingApp.SPA
 
+This project can be found on udemy course.
+I'm pushing code while im progressing and why not push the project beyond after the course is done.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
+Here are some of the usefull tools i used for this projects.
+
+[AlertifyJS](http://alertifyjs.com/) javascript framework for developing pretty browser dialogs and notifications.
+[Angular-JWT](https://github.com/auth0/angular2-jwt#key-features) angular2-jwt is a helper library for working with JWTs in your Angular 2 applications.
+[Ngx-boostrap](https://valor-software.com/ngx-bootstrap/#/) Bootstrap components, powered by Angular. Help to keep a jquery free project.
+[Bootswatch](https://bootswatch.com/) Free simple bootstrap templates.
+
+This SPA is sending a request on a API project made with .net core / c# that can be find [DatingApp.API](https://github.com/Sushi21/DatingApp.API)
 
 ## Development server
 
