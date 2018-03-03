@@ -29,7 +29,7 @@ export class NavComponent implements OnInit {
     console.log('logged out');
   }
 
-  loggedIn(){
+  loggedIn() {
     const token = localStorage.getItem('token');
     return !!token;
   }
