@@ -15,7 +15,10 @@ Here are some of the usefull tools i used for this projects.
 
 [Bootswatch](https://bootswatch.com/) Free simple bootstrap templates.
 
-This SPA is sending a request on a API project made with .net core / c# that can be find [DatingApp.API](https://github.com/Sushi21/DatingApp.API)
+[Ngx-gallery](https://www.npmjs.com/package/ngx-gallery) Picture Gallery.
+
+
+This SPA is requests on a API project made with .net core / c# that can be find [DatingApp.API](https://github.com/Sushi21/DatingApp.API)
 
 ## Development server
 

@@ -1,4 +1,4 @@
- <div *ngIf="!registerMode" class="text-center">
+<div *ngIf="!registerMode" class="text-center">
   <h1>
     Find your match
   </h1>
@@ -10,7 +10,10 @@
 </div>
 
 <div *ngIf="registerMode" class="container">
-   <div class="col-md-4 col-mg-offset-4 mx-auto">
-     <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
-   </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+    </div>
+  </div>
+
 </div>
