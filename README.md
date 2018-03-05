@@ -17,6 +17,10 @@ Here are some of the usefull tools i used for this projects.
 
 [Ngx-gallery](https://www.npmjs.com/package/ngx-gallery) Picture Gallery.
 
+[Ng2-file-upload](https://github.com/valor-software/ng2-file-upload) Easy to use Angular2 directives for files upload.
+
+[_underscorejs](http://underscorejs.org/) JavaScript library that provides a whole mess of useful functional programming helpers.
+
 
 This SPA is requests on a API project made with .net core / c# that can be find [DatingApp.API](https://github.com/Sushi21/DatingApp.API)
 
