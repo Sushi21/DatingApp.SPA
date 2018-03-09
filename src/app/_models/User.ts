@@ -9,6 +9,7 @@ export interface User {
     created: Date;
     lastActive: Date;
     photoUrl: string;
+    gender: string;
     city: string;
     country: string;
     interests?: string;
