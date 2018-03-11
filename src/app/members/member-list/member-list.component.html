@@ -25,6 +25,13 @@
         </div>
         <button type="submit" class="btn btn-primary" style="margin-left:10px">Apply Filters</button>
         <button type="button" class="btn btn-info" style="margin-left:10px" (click)="resetFilters()">Reset Filter</button>
+        <label style="margin-right: 10px">Order By: </label>
+        <div class="float-right">
+          <div class="btn-group">
+            <button type="button" name="orderBy" class="btn btn-primary" btnRadio="lastActive" [(ngModel)]="userParams.orderBy" (click)="loadUsers()"> Last Active</button>
+            <button type="button" name="orderBy" class="btn btn-primary" btnRadio="created" [(ngModel)]="userParams.orderBy" (click)="loadUsers()">Newest Members</button>
+          </div>
+        </div>
       </form>
     </div>
     <br>
@@ -44,13 +51,3 @@
   [(ngModel)]="pagination.currentPage" class="pagination-sm"
   previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
 </div>
-
-    <!-- HTML for ordering -->
-  
-    <div class="pull-right">
-        <label style="margin-right: 10px">Order By: </label>
-        <div class="btn-group">
-          <button type="button" name="orderBy" class="btn btn-primary" btnRadio="lastActive">Last Active</button>
-          <button type="button" name="orderBy" class="btn btn-primary" btnRadio="created">Newest Members</button>
-        </div>
-      </div>
